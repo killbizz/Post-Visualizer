@@ -21,8 +21,7 @@
 			<main>
 				<div id="content">
 					<div class="innertube">
-						<h3>Post Showcase test</h3>
-						<!-- cards contenenti i post qui! -->
+						<h3>Post Showcase:</h3>
                         <c:forEach items="${posts}" var="item">
                             <div class="card text-center bg-light" style="width: 18rem;">
                                 <div class="card-header">${item.author}</div>
@@ -36,6 +35,7 @@
                             </div>
                         </c:forEach>
 					</div>
+                    <h5>Click <a href="/index">HERE</a> to visit the homepage!</h5>
 				</div>
 			</main>
 		

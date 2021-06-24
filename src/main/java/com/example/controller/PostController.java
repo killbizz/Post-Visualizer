@@ -24,5 +24,7 @@ public class PostController {
         model.addAttribute("posts", posts);
         return "posts";
     }
+
+    // TODO : POST method per inserimento di un nuovo post
     
 }

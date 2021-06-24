@@ -44,7 +44,7 @@ main {
     overflow: hidden;
 }
             
-#content h1, h3 {
+#content {
     text-align: center;
 }
 
@@ -65,4 +65,19 @@ main {
 
 p {
     color: #555;
+}
+
+.insertPostForm {
+    margin-left:8em;
+    margin-right:8em;
+}
+
+.insertPostForm input {
+    width: 20em;
+    text-align: center;
+}
+
+.boxing-form {
+    display: inline-block;
+    text-align: center;
 }
