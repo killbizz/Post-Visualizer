@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
- <!DOCTYPE html>
-<!-- Template by html.am -->
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -88,7 +87,7 @@
 			<main>
 				<div id="content">
 					<div class="innertube">
-						<h3>Heading</h3>
+						<h3>Post Showcase</h3>
 						<p><script>generateText(10)</script></p>
 					</div>
 				</div>
@@ -98,7 +97,7 @@
 		
 		<footer id="footer">
 			<div class="innertube">
-				<p>© 2021 Gabriel Bizzo</p>
+				<p>&copy; 2021 Gabriel Bizzo</p>
 			</div>
 		</footer>
 	
