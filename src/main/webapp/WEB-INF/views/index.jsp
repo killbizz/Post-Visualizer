@@ -35,7 +35,7 @@
 				<div id="content">
 					<div class="innertube">
 						<h3>Post Showcase</h3>
-						<p><script>generateText(10)</script></p>
+						<p><script>generateText(20)</script></p>
 					</div>
 				</div>
 			</main>
