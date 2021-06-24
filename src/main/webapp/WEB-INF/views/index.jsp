@@ -3,62 +3,9 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<link rel="stylesheet" href="/resources/css/style.css">
 		<title>Homepage</title>
-
-    <!-- TODO : spostare su file resources/static/style.css -->
-		<style type="text/css">
-		
-			body {
-				margin:0;
-				padding:0;
-				font-family: Sans-Serif;
-				line-height: 1.5em;
-			}
-			
-			#header {
-				background: #ccc;
-				height: 100px;
-			}
-			
-			#header h1 {
-				margin: 0;
-				padding-top: 1.2em;
-        text-align: center;
-			}
-			
-			main {
-				padding-bottom: 10010px;
-				margin-bottom: -10000px;
-				float: left;
-				width: 100%;
-			}
-			
-			#footer {
-				clear: left;
-				width: 100%;
-				background: #ccc;
-				text-align: center;
-				padding: 4px 0;
-			}
-	
-			#wrapper {
-				overflow: hidden;
-			}
-						
-			#content h1, h3 {
-        text-align: center;
-      }
-			
-			.innertube {
-				margin: 15px; /* Padding for content */
-				margin-top: 0;
-			}
-		
-			p {
-				color: #555;
-			}
-		
-		</style>
 		
 		<script type="text/javascript">
 			/* =============================
