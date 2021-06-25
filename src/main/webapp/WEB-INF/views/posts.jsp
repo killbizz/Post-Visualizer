@@ -22,18 +22,27 @@
 				<div id="content">
 					<div class="innertube">
 						<h3>Post Showcase:</h3>
-                        <c:forEach items="${posts}" var="item">
-                            <div class="card text-center bg-light" style="width: 18rem;">
-                                <div class="card-header">${item.author}</div>
-                                <div class="card-body">
-                                    <p class="card-text">${item.text}</p>
-                                    <br />
-                                    <span class="datetime">${item.date}</span>
-                                    <span> - </span>
-                                    <span class="datetime">${item.time}</span>
-                                </div>
-                            </div>
-                        </c:forEach>
+						<div class="card-deck">
+							<% int counter = 0; %>
+							<c:forEach items="${posts}" var="item" varStatus="loop">
+								<% counter++; %>
+								<div class="card text-center bg-light mb-4" style="width: 18rem;">
+									<div class="card-header">${item.author}</div>
+									<div class="card-body">
+										<p class="card-text">${item.text}</p>
+										<br />
+										<span class="datetime">${item.date}</span>
+										<span> - </span>
+										<span class="datetime">${item.time}</span>
+									</div>
+								</div>
+								<% 
+								if((counter % 5 ) == 0) {
+									%>
+									<div class="w-100" ></div>
+								<% } %>
+							</c:forEach>
+						</div>
 					</div>
                     <h5>Click <a href="/index">HERE</a> to visit the homepage!</h5>
 				</div>

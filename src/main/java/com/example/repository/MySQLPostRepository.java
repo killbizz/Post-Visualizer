@@ -43,8 +43,16 @@ public class MySQLPostRepository implements PostRepository {
 
     @Override
     public void insertPost(Post post) {
-        // TODO Auto-generated method stub
-        
+        try{
+            database.getStatement().executeUpdate("INSERT INTO post (Id, Author, Text, Date, Time) VALUES ('"+post.getId()+"', '"+post.getAuthor()+"', '"+post.getText()+"', '"+post.getDate()+"', '"+post.getTime()+"');");
+        } catch (SQLException ex) { 
+            ex.printStackTrace();
+            System.out.println("SQLException");
+            System.out.println(ex.getMessage());
+        } catch (Exception e) {
+            System.out.println("genericException");
+            System.out.println(e.getMessage());
+        }        
     }
 
     @Override

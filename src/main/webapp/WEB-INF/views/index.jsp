@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -20,15 +21,15 @@
 						<h3 class="pb-4">Welcome to the Post Visualizer Web Application</h3>
 						<h5 class="pb-4" >Visit the <a href="/posts">Post Showcase</a>...</h5>
 						<h5 class="pb-5">... or create a new post filling the form below:</h5>
-						<form class="insertPostForm" method="post" action="">
+						<form class="insertPostForm" method="POST" action="/posts">
 							<div class="boxing-form">
 								<div class="form-group">
 									<label for="author">Author Name</label>
-									<input type="text" class="form-control" id="author" placeholder="Author">
+									<input type="text" class="form-control" name="author" id="author" placeholder="Author">
 								</div>
 								<div class="form-group">
 									<label for="text">Post's Text</label>
-									<textarea class="form-control" aria-describedby="textHelp" id="text" rows="4"></textarea>
+									<textarea class="form-control" aria-describedby="textHelp" id="text" name="text" rows="4"></textarea>
 									<small id="textHelp" class="form-text text-muted">Max. 400 characters</small>
 								</div>
 								<div class="form-group">
