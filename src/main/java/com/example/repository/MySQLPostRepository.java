@@ -57,7 +57,17 @@ public class MySQLPostRepository implements PostRepository {
 
     @Override
     public void deletePost(String id) {
-        // TODO Auto-generated method stub
+        String sql = "DELETE FROM post WHERE post.Id = '" + id + "';";
+        try{
+            database.getStatement().executeUpdate(sql);
+        } catch (SQLException ex) { 
+            ex.printStackTrace();
+            System.out.println("SQLException");
+            System.out.println(ex.getMessage());
+        } catch (Exception e) {
+            System.out.println("genericException");
+            System.out.println(e.getMessage());
+        }
         
     }
     

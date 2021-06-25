@@ -2,7 +2,6 @@ package com.example.controller;
 
 import java.sql.Date;
 import java.sql.Time;
-import java.time.LocalTime;
 import java.util.Calendar;
 import java.util.List;
 import java.util.UUID;
@@ -13,6 +12,7 @@ import com.example.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.context.request.WebRequest;
@@ -40,6 +40,12 @@ public class PostController {
         Time time = new Time(Calendar.getInstance().getTimeInMillis());
         Post post = new Post(id, author, text, date, time);
         postService.insertPost(post);
+        return "redirect:/posts";
+    }
+
+    @RequestMapping(value = "/delete/{id}", method = RequestMethod.POST)
+    public String delete(@PathVariable("id") String id) {
+        postService.deletePost(id);
         return "redirect:/posts";
     }
     

@@ -34,6 +34,9 @@
 										<span class="datetime">${item.date}</span>
 										<span> - </span>
 										<span class="datetime">${item.time}</span>
+										<form method="POST" action="/posts/delete/${item.id}">
+											<input type="submit" class="btn btn-danger mb-2" value="Delete">
+										</form>
 									</div>
 								</div>
 								<% 
@@ -43,8 +46,8 @@
 								<% } %>
 							</c:forEach>
 						</div>
+						<h5>Click <a href="/index">HERE</a> to visit the homepage!</h5>
 					</div>
-                    <h5>Click <a href="/index">HERE</a> to visit the homepage!</h5>
 				</div>
 			</main>
 		
