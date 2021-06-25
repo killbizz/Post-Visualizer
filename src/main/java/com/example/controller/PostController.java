@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.UUID;
 
 import com.example.model.Post;
-import com.example.service.PostService;
+import com.example.service.JPAPostService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -22,7 +22,7 @@ import org.springframework.web.context.request.WebRequest;
 public class PostController {
 
     @Autowired
-    private PostService postService;
+    private JPAPostService postService;
 
     @RequestMapping(method = RequestMethod.GET)
     public String getPosts(Model model){
