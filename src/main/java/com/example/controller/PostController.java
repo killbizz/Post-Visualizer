@@ -3,6 +3,8 @@ package com.example.controller;
 import java.sql.Date;
 import java.sql.Time;
 import java.util.Calendar;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.UUID;
 
@@ -27,6 +29,14 @@ public class PostController {
     @RequestMapping(method = RequestMethod.GET)
     public String getPosts(Model model){
         List<Post> posts = postService.getPosts();
+        Collections.sort(posts, new Comparator<Post>(){
+            public int compare(Post p1, Post p2){
+                int c = p2.getDate().compareTo(p1.getDate());
+                if(c == 0) 
+                    c = p2.getTime().compareTo(p1.getTime());
+                return c;
+            }
+        } );
         model.addAttribute("posts", posts);
         return "posts";
     }

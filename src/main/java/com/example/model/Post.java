@@ -1,7 +1,8 @@
 package com.example.model;
 
+import java.io.Serializable;
 import java.sql.Time;
-import java.util.Date;
+import java.sql.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -9,7 +10,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table
-public class Post {
+public class Post implements Serializable {
 
     @Id
     private String id;
@@ -49,12 +50,5 @@ public class Post {
 
     public Time getTime() {
         return this.time;
-    }
-
-    @Override
-    public String toString() {
-        return String.format(
-            "Post[id=%d, author='%s', text='%s', date='%s', time='%s']",
-            id, author, text, date.toString(), time.toString());
     }
 }

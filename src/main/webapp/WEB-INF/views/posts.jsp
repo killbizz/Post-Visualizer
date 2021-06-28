@@ -30,14 +30,15 @@
 									<div class="card-header">${item.author}</div>
 									<div class="card-body">
 										<p class="card-text">${item.text}</p>
-										<br />
-										<span class="datetime">${item.date}</span>
-										<span> - </span>
-										<span class="datetime">${item.time}</span>
 										<form method="POST" action="/posts/delete/${item.id}">
 											<input type="submit" class="btn btn-danger mb-2" value="Delete">
 										</form>
 									</div>
+									<div class="card-footer text-muted">
+    									<span class="datetime">${item.date}</span>
+										<span> --- </span>
+										<span class="datetime">${item.time}</span>
+  									</div>
 								</div>
 								<% 
 								if((counter % 5 ) == 0) {
