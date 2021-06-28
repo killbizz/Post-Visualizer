@@ -5,7 +5,6 @@
  - Spring Framework and MVC
  - SpringBoot
  - Spring Data/JPA
- - Spring Data REST
 
 ## Software required
 
