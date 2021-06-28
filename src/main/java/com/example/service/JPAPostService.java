@@ -10,11 +10,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class JPAPostService {
+public class JPAPostService implements PostService {
     
     @Autowired
     private JPAPostRepository postRepository;
 
+    @Override
     public List<Post> getPosts() {
         List<Post> posts = new ArrayList<Post>();
         postRepository.findAll().forEach( post -> {
@@ -23,10 +24,12 @@ public class JPAPostService {
         return posts;
     }
 
+    @Override
     public void insertPost(Post post) {
         postRepository.save(post);
     }
 
+    @Override
     public void deletePost(String id) {
         postRepository.deleteById(id);   
     }
